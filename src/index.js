@@ -80,7 +80,11 @@ class Amanatsu {
   }
 
   _stringToWords (str) {
-    const words = str.trim().split(this._options.keywords).reduce((prev, word) => {
+    const base = str.trim().split(this._options.keywords)
+    if (base.length < 2) {
+      return base
+    }
+    const words = base.reduce((prev, word) => {
       return [].concat(prev, word.split(this._options.joshi))
     }).reduce((prev, word) => {
       return [].concat(prev, word.split(this._options.bracketsBegin))
