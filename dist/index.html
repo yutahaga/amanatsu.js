@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link href="//fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700" rel=
+    "stylesheet">
+</head>
+<body>
+  <input type="text" placeholder="ここに文章を入力" id="input"/>
+  <div id="sample">
+    やりたいことのそばにいる
+  </div>
+
+  <style>
+  body {
+    background: #fff;
+    color: #444;
+    font: 300 16px/1.6 "RobotoDraft",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+  #sample {
+    font-family: 'RobotoDraft', arial, sans-serif;
+    color: #444;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  </style>
+
+  <script src="/amanatsu.js"></script>
+  <script>
+    var sampleElement = document.getElementById('sample');
+    var input = document.getElementById('input');
+    var amanatsu = new Amanatsu();
+
+    amanatsu.apply(sampleElement)
+
+    input.addEventListener('change', function(e) {
+      sampleElement.innerHTML = e.target.value
+      amanatsu.apply(sampleElement)
+    });
+  </script>
+</body>
+</html>
