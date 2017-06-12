@@ -8,7 +8,8 @@ const dir = {
 
 module.exports = {
   entry: {
-    'amanatsu': path.join(dir.src, 'index.js')
+    'amanatsu': path.join(dir.src, 'index.js'),
+    'amanatsu-loader': path.join(dir.src, 'loader.js')
   },
   output: {
     path: dir.dist,
