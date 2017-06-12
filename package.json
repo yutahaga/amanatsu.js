@@ -11,6 +11,7 @@
   "author": "Yuta Haga",
   "license": "MIT",
   "devDependencies": {
+    "array.from": "^1.0.3",
     "assert": "^1.4.1",
     "ava": "^0.19.1",
     "babel-core": "^6.25.0",

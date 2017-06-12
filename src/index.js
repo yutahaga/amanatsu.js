@@ -51,9 +51,7 @@ class Amanatsu {
   }
 
   _applyAsNode (node) {
-    return Object.keys(node.childNodes).forEach(index => {
-      const child = node.childNodes[index]
-
+    Array.prototype.slice.call(node.childNodes).forEach(child => {
       if (child.nodeType === Node.TEXT_NODE) {
         const text = child.textContent.trim()
         if (text.length === 0) {
@@ -67,7 +65,7 @@ class Amanatsu {
         }
 
         node.removeChild(child)
-      } else if (child.nodeType === Node.ELEMENT_NODE) {
+      } else if (child.nodeType === Node.ELEMENT_NODE && child.childNodes.length > 0) {
         this._applyAsNode(child)
       }
     })
