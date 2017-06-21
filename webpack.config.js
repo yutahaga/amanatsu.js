@@ -16,7 +16,7 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/',
     library: 'Amanatsu',
-    libraryTarget: 'window'
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
