@@ -1,8 +1,8 @@
 {
   "name": "amanatsu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Japanese Line Break Organizer",
-  "main": "src/index.js",
+  "main": "dist/amanatsu.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --inline --hot --open",
