@@ -73,7 +73,7 @@ class Amanatsu {
 
   _wordsToHtml (words) {
     return words.map(word => {
-      return `<span${this._attr}>${word}</span>`
+      return `<span${this._attr}>${word.replace(/\s/g, '&nbsp;')}</span>`
     }).join('')
   }
 

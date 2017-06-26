@@ -1,6 +1,6 @@
 {
   "name": "amanatsu",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Japanese Line Break Organizer",
   "main": "dist/amanatsu.js",
   "scripts": {
